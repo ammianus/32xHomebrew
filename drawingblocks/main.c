@@ -29,8 +29,6 @@ int r1 = 6;
 int g1 = 0;
 int b1 = 0;
 
-//const int world_width = WORLD_WIDTH;
-//int paused = UNPAUSED;
 //stores the previous buttons pressed for handle_input
 unsigned short prev_buttons = 0;
 
@@ -221,13 +219,11 @@ int main(void)
 		drawLineTable(4);
 		
 		
-		//drawRect(104, 84, 80, 64 ,ME_menuBorder);
-		
 		//flip the FB, without waiting on flip 
 		currentFB ^= 1;
 		MARS_VDP_FBCTL = currentFB; 
 		
-		//do game loo
+		//do game loop
 		//artificially introduce delay
 		Hw32xDelay(frameDelay);
 	}
